@@ -15,9 +15,10 @@ Abstract : <p > Social media and microblogging apps allow people to share their 
     
 </p>
 
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~dhyan1999/1.embed">
-Results
-</iframe>
+<div>
+    <a href="https://plotly.com/~dhyan1999/1/" target="_blank" title="Final Bert Augmentation Output" style="display: block; text-align: center;"><img src="https://plotly.com/~dhyan1999/1.png" alt="Final Bert Augmentation Output" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plotly.com/404.png';" /></a>
+    <script data-plotly="dhyan1999:1" src="https://plotly.com/embed.js" async></script>
+</div>
 
 ## Table of Content
 
