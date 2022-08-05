@@ -17,35 +17,24 @@ Abstract : <p > Social media and microblogging apps allow people to share their 
 
 <div>
     <a href="https://plotly.com/~dhyan1999/1/" target="_blank" title="Final Bert Augmentation Output" style="display: block; text-align: center;"><img src="https://plotly.com/~dhyan1999/1.png" alt="Final Bert Augmentation Output" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plotly.com/404.png';" /></a>
-    <script data-plotly="dhyan1999:1" src="https://plotly.com/embed.js" async></script>
 </div>
 
 ## Table of Content
 
 1. [Manifest](#-manifest)
 2. [Prerequisites](#-prerequisites)
-3. [Installation Steps](#%EF%B8%8F-installation-steps)
-4. [Installation of important Libraries](#-installation-of-important-libraries)
-5. [Installation of labelImg](#installation-of-labelImg)
-6. [Use of labelImg in the project](#Use-of-labelImg-in-the-project)
-7. [Implementation of Code](##-implementation-of-code)
-8. [Future scope](#-future-scope)
+8. [Implementation of Code](##-implementation-of-code)
+8. [Results](#-future-scope)
 9. [Video](#video)
 
 ## 🧑🏻‍🏫 Manifest
 
 
 ```
-- bike.ipynb --> A python file that run's Helmet-Detection code
-- bike.xml   --> A xml file which has the entries of all the co-ordinates of each 
-                 image(in the image folder) and has been trained on detecting two classes 
-                      1. Helmet
-                      2. No Helmet
-- README.md ---> This markdown file you are reading.
-- Image ----> Image folder has all the images of people wearing and not wearing Helmet
-- movie2.mp4 --> These is the movie file on which we are going to run our Helmet-Detection
-                 model
-                 (Anybody can change this movie file and put there file for testing😀)
+- Code - Contains all parts of code in a sequential manner
+- Dataset - Dataset that we have used in our project (Augmented Dataset as well)
+- Presentation - Final Presentation
+- Report - IEEE Paper for the project
 ```
 
 
@@ -55,86 +44,9 @@ Abstract : <p > Social media and microblogging apps allow people to share their 
 
 - Python Basics Understanding
 
-- [OpenCV](https://pypi.org/project/opencv-python/ "OpenCV") Library Installed 
+- Understanding of Machine Learning and Deep Learning libraries
 
-- Computer Vision Basic Understanding
-
-## 🛠️ Installation Steps
-
-1. Install [Anaconda](https://www.anaconda.com/products/individual "Anaconda") Software
-
-2. Click on Juypter Notebook
-
-3. Create a seperate folder of any name you want
-
-4. Upload 3 files there bike.ipynb, movie2.mp4 and bike.xml in that folder
-
-5. Run bike.ipynb
-
-**🎇 You are Ready to Go!**
-
-## ❗ Installation of Important Libraries
-
-Before running the .ipynb file we need to import some of the libraries using terminal 
-
-In the Anaconda Terminal, you can run:
-
-```Bash
-pip install opencv-python
-```
-
-For installing TKinter (If it shows the error that Tkinter is not installed)
-
-```Bash
-pip install python-tk
-```
-
-## Installation of labelImg
-
-- LabelImg - LabelImg is a free, open source tool for graphically labeling images. It’s written in Python and uses QT for its graphical interface. It’s an easy, free way to label a few hundred images 
-
-- Open Anaconda Terminal and write run command
-
-```Bash
-sudo pip3 install labelimg
-```
-
-
-## Use of labelImg in the project 
-
-- Step1 - Write the command labelImg in the Anaconda Terminal which will open a window as shown below.
-
-```Bash
-labelimg
-```
-
-![labelimg](img/labelimg.png)
-
-- Step2 - Open the directory where all the pictures are saved using the 'Open dir' link available on the left hand side. This step will display all the images on right side small window.
-
-![step2](img/step2.png)
-
-- Step3 - Make sure YOLO is selected. Then, select the first picture and choose the command create rectBox. On clicking on rectBox, a rectangle can be drawn around the face of the person. 
-
-![step3](img/step3.png)
-
-- Step4 - In this step, we will create a rectangle box around the person and give it a name depending on whether the person is wearing the helmet or not. If the person is wearing a helmet, class name is given as helmet and if not then the class name is given as no helmet. Now we will save this picture.
-
-![step41](img/step41.png)
-
-![step42](img/step42.png)
-
-- Step5 - Now after saving the picture, a class file and a txt file is formed in the folder. Class file contains the 2 classes (helmet and no helmet) that we made and the txt file contains the coordinates of the rectangle that we made around the person’s face.
-
-![step5](img/step5.png)
-
-- Step6 - Repeat step’s 3, 4 and 5 for the rest of the pictures. It’s important to note that, for every picture the class file will remain same but different txt files will be made. 
-
-- Step7 - So, finally after saving the changes made to the last picture one can see 1 class file and different txt files in the folder. 
-
-- Step8 - We can combine all these txt files into one xml file and we can use that xml file in the code to detect the person wearing helmet.
-
-•	Note – The xml file that we need to use for detection will be a huge file. For training and testing, we will require thousands of pictures. This will take many days to train all pictures. This is a timely task. In my project, therefore, I utilized the predefined data set bike.xml.
+- Concepts of Natural Langauge Processing
 
 ## 👨🏻‍💻 Implementation of Code
 
@@ -238,4 +150,4 @@ sliderFrame = tk.Frame(window, width=600, height=100)
 
 <p align="center">Made with Python & ❤️ in India</p>
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</script>
