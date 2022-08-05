@@ -50,12 +50,30 @@ Abstract : <p > Social media and microblogging apps allow people to share their 
 
 ## 👨🏻‍💻 Implementation of Code
 
-import libraries of python OpenCV, tkinter, ImageTk
+BERT Contextual Embedding
+- We assume an invariance that sentences are natural even if the words in the sentences are replaced with other words with paradigmatic relations.
+- At the word places, we stochastically swap out words with others that a bidirectional language model predicts. There are many context-sensitive terms, but they are all acceptable for enhancing the original language
 
 ```py
-import cv2
-import tkinter as tk
-from PIL import ImageTk, Image
+import nlpaug.augmenter.word.context_word_embs as aug
+augmenter = aug.ContextualWordEmbsAug(model_path='bert-base-uncased', action="insert")
+def augmentMyData(df, augmenter, repetitions=1, samples=200):
+    augmented_texts = []
+    # select only the minority class samples
+    spam_df = df[df['label'] == 1].reset_index(drop=True) # removes unecessary index column
+    for i in tqdm(np.random.randint(0, len(spam_df), samples)):
+        # generating 'n_samples' augmented texts
+        for _ in range(repetitions):
+            augmented_text = augmenter.augment(str(spam_df['Text'].iloc[i]))
+            augmented_texts.append(augmented_text)
+    
+    data = {
+        'label': 1,
+        'Text': augmented_texts
+    }
+    aug_df = pd.DataFrame(data)
+    df = shuffle(df.append(aug_df).reset_index(drop=True))
+    return df
 ```
 
 Assigning xml and mp4 file to variables
