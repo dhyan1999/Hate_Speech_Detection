@@ -54,6 +54,8 @@ BERT Contextual Embedding
 - We assume an invariance that sentences are natural even if the words in the sentences are replaced with other words with paradigmatic relations.
 - At the word places, we stochastically swap out words with others that a bidirectional language model predicts. There are many context-sensitive terms, but they are all acceptable for enhancing the original language
 
+
+![BERTCon](img/BERTCon.png)
 ```py
 import nlpaug.augmenter.word.context_word_embs as aug
 augmenter = aug.ContextualWordEmbsAug(model_path='bert-base-uncased', action="insert")
