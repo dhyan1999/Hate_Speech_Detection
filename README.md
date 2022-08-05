@@ -130,10 +130,6 @@ Slider window (slider controls stage position)
 ```py
 sliderFrame = tk.Frame(window, width=600, height=100)
 ```
-## Video 
-
-[![Helmet-Detection--Computer-Vision-](https://img.youtube.com/vi/aaNipNmnv4c/0.jpg)](https://www.youtube.com/watch?v=aaNipNmnv4c)
-
 ## 🎊 Future Scope
 
 - In future this project can be extended to detect the number plates of bikes. 
