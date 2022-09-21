@@ -15,18 +15,14 @@ Abstract : <p > Social media and microblogging apps allow people to share their 
     
 </p>
 
-<div>
-    <a href="https://plotly.com/~dhyan1999/1/" target="_blank" title="Final Bert Augmentation Output" style="display: block; text-align: center;"><img src="https://plotly.com/~dhyan1999/1.png" alt="Final Bert Augmentation Output" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plotly.com/404.png';" /></a>
-</div>
+
 
 ## Table of Content
 
 1. [Manifest](#-manifest)
 2. [Prerequisites](#-prerequisites)
-8. [Implementation of Code](##-implementation-of-code)
-8. [Results](#-future-scope)
-9. [Video](#video)
-
+3. [Implementation of Code](#-implementation-of-code)
+4. [Results](#-future-scope)
 ## 🧑🏻‍🏫 Manifest
 
 
@@ -150,11 +146,11 @@ Slider window (slider controls stage position)
 ```py
 sliderFrame = tk.Frame(window, width=600, height=100)
 ```
-## 🎊 Future Scope
+## Results
 
-- In future this project can be extended to detect the number plates of bikes. 
-
-- Proper GUI
+<div>
+    <a href="https://plotly.com/~dhyan1999/1/" target="_blank" title="Final Bert Augmentation Output" style="display: block; text-align: center;"><img src="https://plotly.com/~dhyan1999/1.png" alt="Final Bert Augmentation Output" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plotly.com/404.png';" /></a>
+</div>
 
 ## 🧑🏻 Author
 
