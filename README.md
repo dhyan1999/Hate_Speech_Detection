@@ -21,7 +21,7 @@ Abstract : <p > Social media and microblogging apps allow people to share their 
 
 1. [Manifest](#-manifest)
 2. [Prerequisites](#-prerequisites)
-3. [Data-Set](#-data-set)
+3. [Data-Set](#data-set)
 4. [Implementation of Code](#-implementation-of-code)
 5. [Results](#results)
 ## 🧑🏻‍🏫 Manifest
@@ -79,78 +79,6 @@ def augmentMyData(df, augmenter, repetitions=1, samples=200):
     return df
 ```
 
-Assigning xml and mp4 file to variables
-
-```py
-cascade_src = 'bike.xml'
-video_src = 'movie2.mp4'
-```
-
-Capture frames from a video
-
-```py
-cap = cv2.VideoCapture(video_src)
-fgbg = cv2.createBackgroundSubtractorMOG2()
-```
-
-Trained XML classifiers describes some features of some object we want to detect
-
-```py
-car_cascade = cv2.CascadeClassifier(cascade_src)
-```
-
-Set up GUI
-
-```py
-window = tk.Tk()  #Makes main window
-window.wm_title("Digital Microscope")
-window.config(background="#FFFFFF")
-```
-
-Graphics window
-
-```py
-imageFrame = tk.Frame(window, width=600, height=500)
-imageFrame.grid(row=0, column=0, padx=10, pady=2)
-```
-
-Capture video frames
-
-```py
-lmain = tk.Label(imageFrame)
-lmain.grid(row=0, column=0)
-```
-
-```py
-def show_frame():
-	# reads frames from a video
-    _, frame = cap.read()
-
-    # convert to gray scale of each frames    
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
-    # Detects bikes of different sizes in the input image
-    cars = car_cascade.detectMultiScale(gray, 1.59, 1)
-```
-
-To draw a rectangle in each bikes
-
-```py
-for (x, y, w, h) in cars:
-    cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 215), 2)
-    color = cv2.cvtColor(frame, cv2.COLOR_BGR2RGBA)
-    img = Image.fromarray(color)
-    imgtk = ImageTk.PhotoImage(image=img)
-    lmain.imgtk = imgtk
-    lmain.configure(image=imgtk)
-    lmain.after(10, show_frame)
-```
-
-Slider window (slider controls stage position)
-
-```py
-sliderFrame = tk.Frame(window, width=600, height=100)
-```
 
 ## Results
 
