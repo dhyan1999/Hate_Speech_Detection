@@ -103,5 +103,3 @@ According to our research comparing various model types, word embedding techniqu
 - 🏮 [Email](mailto:dhyan.shah99@gmail.com?subject=Hi%20from%20Dhyan%20Shah "Hi!")
 
 <p align="center">Made with Python & ❤️ in India</p>
-
-</script>
