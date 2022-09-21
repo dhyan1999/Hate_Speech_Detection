@@ -21,8 +21,9 @@ Abstract : <p > Social media and microblogging apps allow people to share their 
 
 1. [Manifest](#-manifest)
 2. [Prerequisites](#-prerequisites)
-3. [Implementation of Code](#-implementation-of-code)
-4. [Results](#-future-scope)
+3. [Data-Set](#-data-set)
+4. [Implementation of Code](#-implementation-of-code)
+5. [Results](#results)
 ## 🧑🏻‍🏫 Manifest
 
 
@@ -43,6 +44,10 @@ Abstract : <p > Social media and microblogging apps allow people to share their 
 - Understanding of Machine Learning and Deep Learning libraries
 
 - Concepts of Natural Langauge Processing
+
+## Data-Set
+
+![dataset](img/dataset.png)
 
 ## 👨🏻‍💻 Implementation of Code
 
@@ -146,11 +151,20 @@ Slider window (slider controls stage position)
 ```py
 sliderFrame = tk.Frame(window, width=600, height=100)
 ```
+
 ## Results
+
+![tb1](img/tb1.png)
+
+![tb2](img/tb2.png)
+
+The original dataset has only 12.01% of hate speech data. However, We increased the minority class until the threshold point (50%), using Bert contextual embeddings. The Fig.12 represents the graphical representation of the classification report.
 
 <div>
     <a href="https://plotly.com/~dhyan1999/1/" target="_blank" title="Final Bert Augmentation Output" style="display: block; text-align: center;"><img src="https://plotly.com/~dhyan1999/1.png" alt="Final Bert Augmentation Output" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plotly.com/404.png';" /></a>
 </div>
+
+According to our research comparing various model types, word embedding techniques, and augmentation approaches, we have come to the conclusion that augmentation is a critical element of an unbalanced dataset to get a better F1 score. BERT contextual embedding is highly helpful for text augmentation in our scenario since it doesn’t alter the sentence’s main idea; rather, it only adds supporting words. Our tests reveal that the combination of TD-IDF + BERT Contextual Embedding + Random Forest provides the greatest F1-Score, Recall, and accuracy.
 
 ## 🧑🏻 Author
 
